@@ -1,0 +1,1 @@
+// Write a c program to create two threads and one of which will calculate factorial of a number and another thread will find reverse of a number. Both threads will return their result to the main thread.

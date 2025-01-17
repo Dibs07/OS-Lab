@@ -1,0 +1,1 @@
+// Write a c program to implement FCFS scheduling algorithm. (Assume all the processes arrive at time zero)

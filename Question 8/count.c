@@ -1,0 +1,1 @@
+// Write a c program to create a thread which will count the number of characters as input by the main thread. Both the threads will run simultaneously. (Using semaphore).

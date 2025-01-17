@@ -1,0 +1,1 @@
+# Write a shell script to find the maximum number from given three numbers using if-else

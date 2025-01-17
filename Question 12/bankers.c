@@ -1,0 +1,1 @@
+// Write a c program for implementing Banker’s Algorithm for Deadlock avoidance.

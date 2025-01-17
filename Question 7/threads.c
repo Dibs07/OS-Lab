@@ -1,0 +1,1 @@
+// Write a c program to create a thread from main thread and then print the thread id and process id of that newly created thread and main thread.
