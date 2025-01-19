@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include <unistd.h>
 
-void *print_thread_info(void *arg) {
+void *print(void *arg) {
     printf("New Thread:\n");
     printf("Thread ID: %lu\n", pthread_self());
     printf("Process ID: %d\n\n", getpid());
@@ -15,7 +15,7 @@ int main() {
     printf("Main Thread:\n");
     printf("Thread ID: %lu\n", pthread_self());
     printf("Process ID: %d\n\n", getpid());
-    if (pthread_create(&thread, NULL, print_thread_info, NULL) != 0) {
+    if (pthread_create(&thread, NULL, print, NULL) != 0) {
         perror("Failed to create thread");
         return 1;
     }
