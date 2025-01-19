@@ -14,7 +14,7 @@ int main(){
         printf("Child process\n");
         //char *args[]={"ls",NULL}; // this can be also used
         char *args[]={"ls","-l",NULL};
-        execvp(args[0],args);
+        execvp(args[0],args); //execlp
         perror("execvp failed");
         exit(1);
     }

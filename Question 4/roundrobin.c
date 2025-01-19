@@ -16,7 +16,7 @@ int main(){
     int tq;
     printf("Enter the time quantum: ");
     scanf("%d",&tq);
-    int total_wt=0,total_tat=0;
+    int total_wt=0,total_tat=0,totaltat=0;
     int flag=0;
     while(flag!=n){
         for(int i=0;i<n;i++){
@@ -28,6 +28,7 @@ int main(){
                     tat[i]=total_tat;
                     wt[i]=tat[i]-bt[i];
                     total_wt+=wt[i];
+                    totaltat+=tat[i];
                     rem_bt[i]=0;
                 }
                 else{
@@ -45,5 +46,5 @@ int main(){
         printf("%d\t%d\t\t%d\t\t\t\t%d\n",pr[i],bt[i],tat[i],wt[i]);
     }
     printf("Average Waiting Time: %.2f\n",(float)total_wt/n);
-    printf("Average Turn Around Time: %.2f\n",(float)total_tat/n);
+    printf("Average Turn Around Time: %.2f\n",(float)totaltat/n);
 }
