@@ -11,21 +11,21 @@ int signal(int s){
 }
 
 void producer(){
-    mutex=wait(mutex);
-    full=signal(full);
     empty=wait(empty);
+    mutex=wait(mutex);
     x++;
     printf("Producer produces the item %d\n",x);
     mutex=signal(mutex);
+    full=signal(full);
 }
 
 void consumer(){
-    mutex=wait(mutex);
     full=wait(full);
-    empty=signal(empty);
+    mutex=wait(mutex);
     printf("Consumer consumes the item %d\n",x);
     x--;
     mutex=signal(mutex);
+    empty=signal(empty);
 }
 
 int main(){
@@ -57,4 +57,5 @@ int main(){
                 printf("Invalid choice\n");
         }
     }
+    return 0;
 }
